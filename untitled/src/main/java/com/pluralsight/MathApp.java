@@ -25,6 +25,7 @@ public class MathApp {
         System.out.println(" ");
         System.out.println("Question 2 Solution");
         System.out.println("The Smaller Cost is: $" + smallestPrice);
+        System.out.println(" ");
 
         //Question 3
         double pi = 3.14;
@@ -32,16 +33,17 @@ public class MathApp {
         // Area = PI * R^2
 
         double circleArea = pi * Math.pow(circleRadius, 2);
-        System.out.println(" ");
         System.out.println("Question 3 Solution");
-        System.out.println("The Area is: " + circleArea+ "units^2");
+        System.out.printf("The Area is: %.2f", circleArea, "units^2");
+        System.out.println(" ");
 
         //Question 4
         double squareRoot = 5.0;
         double answer = Math.sqrt(5.0);
         System.out.println(" ");
         System.out.println("Question 4 Solution");
-        System.out.println("The square root is: " + answer);
+        System.out.printf("The square root is: %.2f", answer);
+        System.out.println(" ");
 
         //Question 5
         int firstX = 5;
@@ -53,7 +55,8 @@ public class MathApp {
         double result = Math.sqrt(Math.pow((secondX - firstX), 2) + Math.pow((secondY - firstY), 2));
         System.out.println(" ");
         System.out.println("Question 5 Solution");
-        System.out.println("The Distance is: " + result);
+        System.out.printf("The Distance is: %.4f", result);
+        System.out.println(" ");
 
         //Question 6
         double value1 = -3.8;
@@ -68,7 +71,7 @@ public class MathApp {
 
         System.out.println(" ");
         System.out.println("Question 7 Solution");
-        System.out.println("Your randomly generated number between 0 & 1 is: " + randomNum);
+        System.out.printf("Your randomly generated number between 0 & 1 is: %.3f", randomNum);
     }
 }
 
