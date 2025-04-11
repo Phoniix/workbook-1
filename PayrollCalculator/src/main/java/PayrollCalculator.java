@@ -9,16 +9,26 @@ public class PayrollCalculator {
         System.out.println(" ");
         System.out.println("Enter your name: ");
         String employeeName = scanner.nextLine();
+
         System.out.println(" ");
         System.out.println(" Enter your hours worked: ");
         double hoursWorked = Double.parseDouble(scanner.nextLine());
+
         System.out.println(" ");
         System.out.println("Enter your pay rate per/hour: ");
         double payRate = Double.parseDouble(scanner.nextLine());
-        double result = hoursWorked * payRate;
+
+        double grossPay = 0.0;
 
         System.out.println(" ");
         System.out.println("Hello, " + employeeName + "!");
-        System.out.println("Based on " + hoursWorked + " hours. At " + payRate + " per/hour, is equal to: $" + result);
+
+        if (hoursWorked > 40) {
+            grossPay = (40 * payRate) + ((hoursWorked - 40) * (1.5 * payRate));
+            System.out.println("Based on " + hoursWorked + " hours. At " + payRate + " per/hour, is equal to: $" + grossPay);
+        } else {
+            grossPay = payRate * hoursWorked;
+            System.out.println("Based on " + hoursWorked + " hours. At " + payRate + " per/hour, is equal to: $" + grossPay);
+        }
     }
 }
